@@ -22,7 +22,7 @@ def rag(request: Request, payload: RAGRequest) -> RAGResponse:
 
     return RAGResponse(
         request_id = request.state.request_id,
-        answer = answer
+        answer = answer["answer"]
     )
 
 api_router = APIRouter()
